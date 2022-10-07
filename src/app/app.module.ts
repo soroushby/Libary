@@ -5,8 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -20,7 +23,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-  MaterialModule
+  MaterialModule,
+  FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
