@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BooksService } from './books.service';
+import { Books } from './interfaces/books';
 
 @Component({
   selector: 'app-books',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
+  books?:Observable<Books[]> | any ;
 
-  constructor() { }
+  constructor(private bookservice: BooksService) { }
 
   ngOnInit(): void {
+
+    this.bookservice.loadAllBooks().subscribe(x=>console.log(x))
   }
 
 }
