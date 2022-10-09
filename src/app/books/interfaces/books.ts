@@ -4,6 +4,6 @@ export interface Books {
   price:string,
   subtitle:string,
   title:string,
-  urt:string
+  url:string
 
 }

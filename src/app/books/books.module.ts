@@ -6,11 +6,13 @@ import { BooksComponent } from './books.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BooksCardListComponent } from './books-card-list/books-card-list.component';
 
 
 @NgModule({
   declarations: [
-    BooksComponent
+    BooksComponent,
+    BooksCardListComponent
   ],
   imports: [
     CommonModule,

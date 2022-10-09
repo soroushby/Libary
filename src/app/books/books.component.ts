@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { BooksService } from './books.service';
 import { Books } from './interfaces/books';
 
@@ -9,13 +9,16 @@ import { Books } from './interfaces/books';
   styleUrls: ['./books.component.scss']
 })
 export class BooksComponent implements OnInit {
-  books?:Observable<Books[]> | any ;
+  books:Observable<Books> | undefined;
 
   constructor(private bookservice: BooksService) { }
 
   ngOnInit(): void {
+    this.books = this.bookservice.loadBooks()
 
-    this.bookservice.loadAllBooks().subscribe(x=>console.log(x))
+
+// this.books = this.bookservice.books$.subscribe()
+
   }
 
 }

@@ -21,7 +21,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "suppressImplicitAnyIndexErrors": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -30,3 +31,5 @@
     "strictTemplates": true
   }
 }
+
+
