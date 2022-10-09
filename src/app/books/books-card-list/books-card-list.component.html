@@ -8,13 +8,20 @@
 
   </mat-card-header >
   <img mat-card-xl-image fxLayoutAlign="center" [src]="book.image" alt="Photo of a Shiba Inu">
-  <mat-card-content fxLayoutAlign="center">
-    <p>
+  <mat-card-content fxLayoutAlign="center" fxLayoutGap="10px">
+    <h3>
     {{book.subtitle}}
-    </p>
+    </h3>
+    <h3>
+      {{book.price}}
+      </h3>
+
   </mat-card-content>
   <mat-card-actions fxLayoutAlign="center" >
-    <button mat-button>LIKE</button>
+
+    <button mat-button [routerLink]="[ book.isbn13]"
+    routerLinkActive="router-link-active"
+    > View book detail</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>

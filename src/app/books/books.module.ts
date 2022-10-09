@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BooksCardListComponent } from './books-card-list/books-card-list.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 
 
 @NgModule({
   declarations: [
     BooksComponent,
-    BooksCardListComponent
+    BooksCardListComponent,
+    BookDetailComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,6 @@ import { BooksCardListComponent } from './books-card-list/books-card-list.compon
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule
-  ]
+  ],
 })
 export class BooksModule { }

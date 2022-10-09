@@ -11,6 +11,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

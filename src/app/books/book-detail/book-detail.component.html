@@ -1,0 +1,33 @@
+
+
+<div  fxLayoutAlign="center center" >
+
+  <mat-card class="example-card" fxLayoutAlign="space-between center" fxLayout="column">
+    <mat-card-header fxLayoutAlign="center" >
+
+      <mat-card-title>{{singleBook?.title}}</mat-card-title>
+
+    </mat-card-header >
+    <img mat-card-xl-image fxLayoutAlign="center" [src]="singleBook?.image" alt="Photo of a Shiba Inu">
+    <mat-card-content fxLayoutAlign="center center" fxLayoutGap="10px" fxLayout="column">
+      <h3>
+      {{singleBook?.subtitle}}
+      </h3>
+      <h3>
+        {{singleBook?.year}}
+        </h3>
+        <h3>
+          {{singleBook?.rating}}
+          </h3>
+          <h3>
+            {{singleBook?.desc}}
+          </h3>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center" >
+
+      <button mat-raised-button [routerLink]="['/books']"
+      routerLinkActive="router-link-active"
+      > Back </button>
+
+    </mat-card-actions>
+  </mat-card>
