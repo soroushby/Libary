@@ -5,6 +5,8 @@ import { BooksCardListComponent } from './books-card-list/books-card-list.compon
 import { BooksComponent } from './books.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { AuthGuard } from '../guards/auth.guard';
+
 
 
 
@@ -17,6 +19,7 @@ const routes: Routes = [
     resolve: {
       singleBookData: singleBookResolver,
     },
+    canActivate:[AuthGuard]
   },
 ];
 

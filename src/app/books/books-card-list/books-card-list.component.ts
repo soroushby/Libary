@@ -1,5 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild,  } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+
+import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
 import { Books } from '../interfaces/books';
+import { SingleBook } from '../interfaces/single-book';
+
+
 
 @Component({
   selector: 'app-books-card-list',
@@ -8,7 +15,20 @@ import { Books } from '../interfaces/books';
 })
 export class BooksCardListComponent {
 
-  @Input() books:any| undefined
+  displayedColumns: string[] = ['title', 'price', 'view' , 'link'];
+
+  @Input() books:any | undefined
+
+  @ViewChild(MatPaginator) paginator: MatPaginator | undefined ;
+
+
+
+
+
+
+
+
+
 
 
 }

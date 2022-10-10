@@ -8,6 +8,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
 
 
 
@@ -21,7 +33,19 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableModule,
+        MatSortModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatIconModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatButtonModule,
+        MatPaginatorModule
+
   ]
 })
 export class MaterialModule { }

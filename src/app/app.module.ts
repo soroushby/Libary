@@ -16,6 +16,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 
 import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './login/user-profile/user-profile.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -33,6 +34,7 @@ import { UserProfileComponent } from './login/user-profile/user-profile.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
 
     AuthModule.forRoot({
       domain: 'dev-e4qhu3di.auth0.com',

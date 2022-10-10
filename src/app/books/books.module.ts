@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BooksCardListComponent } from './books-card-list/books-card-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AddBookComponent } from './add-book/add-book.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AddBookComponent } from './add-book/add-book.component';
     BooksRoutingModule,
     HttpClientModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ],
 })
 export class BooksModule { }
