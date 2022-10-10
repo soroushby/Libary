@@ -4,12 +4,17 @@ import { CommonModule } from '@angular/common';
 import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+
 import { BooksCardListComponent } from './books-card-list/books-card-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
-import { AddBookComponent } from './add-book/add-book.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SearchComponent } from './search/search.component';
+
 
 
 @NgModule({
@@ -17,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BooksComponent,
     BooksCardListComponent,
     BookDetailComponent,
-    AddBookComponent
+    SearchComponent,
+
   ],
   imports: [
     CommonModule,
@@ -25,7 +31,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
+
   ],
 })
 export class BooksModule { }

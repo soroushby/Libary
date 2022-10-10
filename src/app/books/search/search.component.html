@@ -1,0 +1,59 @@
+<div class="container" fxLayoutAlign="start center" fxLayout="column">
+<mat-form-field class="example-form-field" appearance="fill">
+  <mat-label>Search for books</mat-label>
+  <input matInput type="text" [(ngModel)]="books">
+  <button  matSuffix mat-icon-button aria-label="Clear" (click)="onSearch()" >
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+
+<div class="error" *ngIf="!searchResult">
+<h4>Unable to find books</h4>
+</div>
+
+
+<table mat-table mat-sort [dataSource]="searchResult" *ngIf="searchResult" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="title" >
+    <th mat-header-cell *matHeaderCellDef > Title </th>
+    <td mat-cell *matCellDef="let book"> {{book.title}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef> price </th>
+    <td mat-cell *matCellDef="let book"> {{book.price}} </td>
+  </ng-container>
+
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="view">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let book"> <span ><img class="book-avatar" [src]=book.image></span></td>
+  </ng-container>
+
+  <ng-container matColumnDef="link">
+    <th mat-header-cell *matHeaderCellDef> Details </th>
+    <td mat-cell *matCellDef="let book">
+      <a [routerLink]="[books/book.isbn13]" routerLinkActive="router-link-active" >
+        <mat-icon>arrow_circle_right</mat-icon>
+      </a>
+  </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+</table>
+
+</div>
+

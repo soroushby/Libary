@@ -11,6 +11,7 @@ import { Books } from './interfaces/books';
 export class BooksComponent implements OnInit {
   books:Observable<Books> | undefined;
 
+
   constructor(private bookservice: BooksService) { }
 
   ngOnInit(): void {
@@ -20,5 +21,6 @@ export class BooksComponent implements OnInit {
 // this.books = this.bookservice.books$.subscribe()
 
   }
+
 
 }
