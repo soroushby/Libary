@@ -8,13 +8,15 @@ import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BooksCardListComponent } from './books-card-list/books-card-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { AddBookComponent } from './add-book/add-book.component';
 
 
 @NgModule({
   declarations: [
     BooksComponent,
     BooksCardListComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    AddBookComponent
   ],
   imports: [
     CommonModule,

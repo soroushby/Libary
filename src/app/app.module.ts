@@ -12,7 +12,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
+import { LoginComponent } from './login/login.component';
+import { UserProfileComponent } from './login/user-profile/user-profile.component';
 
 
 
@@ -21,13 +24,20 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     ContactUsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+
+    AuthModule.forRoot({
+      domain: 'dev-e4qhu3di.auth0.com',
+      clientId: 'aQVLyzpa4F8QXtxXaB6Vil7Ql7UnA5eO'
+    }),
 
    MaterialModule,
    FlexLayoutModule

@@ -12,8 +12,17 @@
     Contactus
       </button>
       <button mat-icon-button class="example-icon" [routerLink]="['/books']" routerLinkActive="router-link-active"  >
-      Books
+      Books list
       </button>
+      <button mat-icon-button class="example-icon" [routerLink]="['books/addbook']" routerLinkActive="router-link-active"  >
+        Add Books
+        </button>
+      <div>
+        <app-login></app-login>
+      </div>
+     <div>
+      <app-user-profile></app-user-profile>
+     </div>
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
