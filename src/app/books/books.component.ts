@@ -6,21 +6,16 @@ import { Books } from './interfaces/books';
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss']
+  styleUrls: ['./books.component.scss'],
 })
 export class BooksComponent implements OnInit {
-  books:Observable<Books> | undefined;
+  books: Observable<Books> | undefined;
 
-
-  constructor(private bookservice: BooksService) { }
+  constructor(private bookservice: BooksService) {}
 
   ngOnInit(): void {
-    this.books = this.bookservice.loadBooks()
+    this.books = this.bookservice.loadBooks();
 
-
-// this.books = this.bookservice.books$.subscribe()
-
+    // this.books = this.bookservice.books$.subscribe()
   }
-
-
 }

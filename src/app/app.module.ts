@@ -8,7 +8,6 @@ import { MaterialModule } from './shared/material.module';
 
 import { ContactUsComponent } from './contact-us/contact-us.component';
 
-
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -18,16 +17,13 @@ import { LoginComponent } from './login/login.component';
 import { UserProfileComponent } from './login/user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     ContactUsComponent,
     PageNotFoundComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,13 +34,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     AuthModule.forRoot({
       domain: 'dev-e4qhu3di.auth0.com',
-      clientId: 'aQVLyzpa4F8QXtxXaB6Vil7Ql7UnA5eO'
+      clientId: 'aQVLyzpa4F8QXtxXaB6Vil7Ql7UnA5eO',
     }),
 
-   MaterialModule,
-   FlexLayoutModule
+    MaterialModule,
+    FlexLayoutModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

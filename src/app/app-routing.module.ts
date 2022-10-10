@@ -5,17 +5,19 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-
-  {path:"", redirectTo:"/books", pathMatch:"full"},
-  { path: 'books', loadChildren: () => import('./books/books.module').then(m => m.BooksModule) },
-  {path:'login',component:LoginComponent},
-  {path:"contactus",component:ContactUsComponent},
-  {path:"**",component:PageNotFoundComponent}
-
+  { path: '', redirectTo: '/books', pathMatch: 'full' },
+  {
+    path: 'books',
+    loadChildren: () =>
+      import('./books/books.module').then((m) => m.BooksModule),
+  },
+  { path: 'login', component: LoginComponent },
+  { path: 'contactus', component: ContactUsComponent },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

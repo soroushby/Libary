@@ -8,25 +8,22 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { AuthGuard } from '../guards/auth.guard';
 import { SearchComponent } from './search/search.component';
 
-
-
-
 const routes: Routes = [
   { path: '', component: BooksComponent },
-  {path:'search',component:SearchComponent},
+  { path: 'search', component: SearchComponent },
   {
     path: ':bookId',
     component: BookDetailComponent,
     resolve: {
       singleBookData: singleBookResolver,
     },
-    canActivate:[AuthGuard]
+    canActivate: [AuthGuard],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers:[singleBookResolver]
+  providers: [singleBookResolver],
 })
-export class BooksRoutingModule { }
+export class BooksRoutingModule {}

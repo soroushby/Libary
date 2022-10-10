@@ -10,12 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-
 import { BooksCardListComponent } from './books-card-list/books-card-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { SearchComponent } from './search/search.component';
-
-
 
 @NgModule({
   declarations: [
@@ -23,7 +20,6 @@ import { SearchComponent } from './search/search.component';
     BooksCardListComponent,
     BookDetailComponent,
     SearchComponent,
-
   ],
   imports: [
     CommonModule,
@@ -32,8 +28,7 @@ import { SearchComponent } from './search/search.component';
     MaterialModule,
     FlexLayoutModule,
     ReactiveFormsModule,
-    FormsModule
-
+    FormsModule,
   ],
 })
-export class BooksModule { }
+export class BooksModule {}

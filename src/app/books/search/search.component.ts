@@ -6,22 +6,21 @@ import { Books } from '../interfaces/books';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  displayedColumns: string[] = ['title', 'price', 'view' , 'link'];
-    books:any;
-    searchResult:any
+  displayedColumns: string[] = ['title', 'price', 'view', 'link'];
+  books: any;
+  searchResult: any;
 
-  constructor(private bookservice: BooksService) { }
+  constructor(private bookservice: BooksService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  onSearch() {
+    this.bookservice
+      .searchBook(this.books)
+      .subscribe((response) => (this.searchResult = response));
+    console.log(this.searchResult);
   }
-
- onSearch(){
-    this.bookservice.searchBook(this.books).subscribe(response =>this.searchResult=response)
-    console.log(this.searchResult)
-  }
-
 }

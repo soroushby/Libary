@@ -1,36 +1,50 @@
-
-
-<mat-sidenav-container class="example-container"   >
-  <mat-sidenav mode="side" #sidenav >Sidenav content</mat-sidenav>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" #sidenav>Sidenav content</mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" fxLayoutGap="30px">
-      <button  mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()" >
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        (click)="sidenav.toggle()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
 
-      <button mat-icon-button class="example-icon favorite-icon" [routerLink]="['/contactus']" routerLinkActive="router-link-active" >
-    Contactus
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        [routerLink]="['/contactus']"
+        routerLinkActive="router-link-active"
+      >
+        Contactus
       </button>
-      <button mat-icon-button class="example-icon" [routerLink]="['/books']" routerLinkActive="router-link-active"  >
-      Books list
+      <button
+        mat-icon-button
+        class="example-icon"
+        [routerLink]="['/books']"
+        routerLinkActive="router-link-active"
+      >
+        Books list
       </button>
-      <button mat-icon-button class="example-icon" [routerLink]="['books/search']" routerLinkActive="router-link-active"  >
+      <button
+        mat-icon-button
+        class="example-icon"
+        [routerLink]="['books/search']"
+        routerLinkActive="router-link-active"
+      >
         Search
-        </button>
+      </button>
       <div>
         <app-login></app-login>
       </div>
-     <div>
-      <app-user-profile></app-user-profile>
-     </div>
+      <div>
+        <app-user-profile></app-user-profile>
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
-
 </mat-sidenav-container>
-
-
-
 
 <!--
 <mat-sidenav-container class="example-container" >
