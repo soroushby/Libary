@@ -1,5 +1,7 @@
 <div fxLayoutAlign="center start">
-  <app-books-card-list [books]="books | async"> </app-books-card-list>
+  <ng-container *ngIf="books$ | async as books">
+    <app-books-card-list [books]="books"> </app-books-card-list>
 
-  <mat-spinner *ngIf="!(books | async)"></mat-spinner>
+    <mat-spinner *ngIf="!books"></mat-spinner>
+  </ng-container>
 </div>

@@ -1,4 +1,4 @@
-export interface Books {
+export interface BookUnDetailed {
   image: string;
   isbn13: string;
   price: string;

@@ -7,7 +7,7 @@
     </button>
   </mat-form-field>
 
-  <div class="error" *ngIf="!searchResult">
+  <div class="error" *ngIf="!searchResult?.length && isSearchedEver">
     <h4>Unable to find books</h4>
   </div>
 
@@ -15,7 +15,7 @@
     mat-table
     mat-sort
     [dataSource]="searchResult"
-    *ngIf="searchResult"
+    *ngIf="searchResult?.length"
     class="mat-elevation-z8"
   >
     <!--- Note that these columns can be defined in any order.

@@ -13,32 +13,31 @@ import {
   tap,
   throwError,
 } from 'rxjs';
-import { Books } from './interfaces/books';
+import { BookUnDetailed } from './interfaces/book-undetailed.model';
 import { SingleBook } from './interfaces/single-book';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BooksService {
-  private bookSubject = new BehaviorSubject<Books[]>([]);
+  private bookSubject = new BehaviorSubject<BookUnDetailed[]>([]);
 
-  books$: Observable<Books[]> = this.bookSubject.asObservable();
+  books$: Observable<BookUnDetailed[]> = this.bookSubject.asObservable();
 
   // books$:Observable<Books[]> | undefined |any
 
   constructor(private http: HttpClient) {}
 
-  loadBooks() {
-    return this.http.get<Books[]>('https://api.itbook.store/1.0/new').pipe(
+  loadBooks(): Observable<any[]> {
+    return this.http.get('https://api.itbook.store/1.0/new').pipe(
       map((response) => {
         return response['books'];
       }),
-      catchError((err) => {
-        return of(err);
-      }),
+      // catchError((err) => {
+      //   return of(err);
+      // }),
       shareReplay(),
       tap((x) => console.log(x))
-      // tap(books => this.bookSubject.next(books)),
     );
   }
 
@@ -61,9 +60,7 @@ export class BooksService {
         catchError((err) => {
           return of(err);
         }),
-        shareReplay(),
-        tap((x) => console.log(x))
-        // tap(books => this.bookSubject.next(books)),
+        shareReplay()
       );
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, tap } from 'rxjs';
 import { BooksService } from '../books.service';
-import { Books } from '../interfaces/books';
+import { BookUnDetailed } from '../interfaces/book-undetailed.model';
 
 @Component({
   selector: 'app-search',
@@ -11,16 +11,22 @@ import { Books } from '../interfaces/books';
 export class SearchComponent implements OnInit {
   displayedColumns: string[] = ['title', 'price', 'view', 'link'];
   books: any;
-  searchResult: any;
+  searchResult = [];
+  isSearchedEver: boolean | undefined;
 
   constructor(private bookservice: BooksService) {}
 
   ngOnInit(): void {}
 
   onSearch() {
+    this.isSearchedEver = true;
     this.bookservice
       .searchBook(this.books)
-      .subscribe((response) => (this.searchResult = response));
-    console.log(this.searchResult);
+      .pipe(
+        tap((response) => {
+          this.searchResult = response;
+        })
+      )
+      .subscribe();
   }
 }
