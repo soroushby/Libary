@@ -1,10 +1,16 @@
-<table mat-table mat-sort [dataSource]="dataSource" class="mat-elevation-z8">
+<table
+  mat-table
+  mat-sort
+  [dataSource]="dataSource"
+  matSort
+  class="mat-elevation-z8"
+>
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef>Title</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
     <td mat-cell *matCellDef="let book">{{ book.title }}</td>
   </ng-container>
 
@@ -12,20 +18,20 @@
 
   <!-- Weight Column -->
   <ng-container matColumnDef="price">
-    <th mat-header-cell *matHeaderCellDef>price</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>price</th>
     <td mat-cell *matCellDef="let book">{{ book.price }}</td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="view">
-    <th mat-header-cell *matHeaderCellDef></th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
     <td mat-cell *matCellDef="let book">
       <span><img class="book-avatar" [src]="book.image" /></span>
     </td>
   </ng-container>
 
   <ng-container matColumnDef="link">
-    <th mat-header-cell *matHeaderCellDef>Details</th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Details</th>
     <td mat-cell *matCellDef="let book">
       <a [routerLink]="[book.isbn13]" routerLinkActive="router-link-active">
         <mat-icon>arrow_circle_right</mat-icon>

@@ -1,8 +1,9 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav mode="side" #sidenav>Sidenav content</mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" fxLayoutGap="30px">
+    <mat-toolbar class="toolbar" fxLayoutGap="5rem" fxLayoutAlign=" center">
       <button
+        fxLayoutAlign="center center"
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with menu icon"
@@ -12,14 +13,7 @@
       </button>
 
       <button
-        mat-icon-button
-        class="example-icon favorite-icon"
-        [routerLink]="['/contactus']"
-        routerLinkActive="router-link-active"
-      >
-        Contact us
-      </button>
-      <button
+        fxLayoutAlign="center center"
         mat-icon-button
         class="example-icon"
         [routerLink]="['/books']"
@@ -28,6 +22,7 @@
         Books list
       </button>
       <button
+        fxLayoutAlign="center center"
         mat-icon-button
         class="example-icon"
         [routerLink]="['books/search']"
@@ -35,7 +30,16 @@
       >
         Search
       </button>
-      <div>
+      <button
+        fxLayoutAlign="center center"
+        mat-icon-button
+        class="example-icon favorite-icon"
+        [routerLink]="['/contactus']"
+        routerLinkActive="router-link-active"
+      >
+        Contact us
+      </button>
+      <div fxLayoutAlign=" center">
         <app-login></app-login>
       </div>
       <div>

@@ -5,7 +5,11 @@
     fxLayout="column"
     fxLayoutAlign="center center"
   >
-    <mat-card fxLayout="column" class="card" fxLayoutGap="10px">
+    <mat-card
+      fxLayout="column"
+      class="card mat-elevation-z10"
+      fxLayoutGap="10px"
+    >
       <mat-form-field>
         <mat-label>Name</mat-label>
         <input
@@ -76,9 +80,9 @@
     </mat-card>
     <div mat-dialog-actions>
       <button
+        class="submit-button margin-top"
         mat-raised-button
         color="primary"
-        align="center center"
         type="submit"
         [disabled]="!form.valid"
       >
