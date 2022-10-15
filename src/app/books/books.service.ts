@@ -13,6 +13,7 @@ import {
   tap,
   throwError,
 } from 'rxjs';
+import { MessagesService } from '../messages/messages.service';
 import { BookUnDetailed } from './interfaces/book-undetailed.model';
 import { SingleBook } from './interfaces/single-book';
 
@@ -26,16 +27,19 @@ export class BooksService {
 
   // books$:Observable<Books[]> | undefined |any
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private messages: MessagesService) {}
 
   loadBooks(): Observable<any[]> {
     return this.http.get('https://api.itbook.store/1.0/new').pipe(
       map((response) => {
         return response['books'];
       }),
-      // catchError((err) => {
-      //   return of(err);
-      // }),
+      catchError((err) => {
+        const message = 'Could not load courses';
+        this.messages.showErrors(message);
+        console.log(message, err);
+        return throwError(() => err);
+      }),
       shareReplay(),
       tap((x) => console.log(x))
     );

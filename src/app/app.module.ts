@@ -19,6 +19,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UserProfileComponent } from './login/user-profile/user-profile.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MessagesComponent } from './messages/messages.component';
+import { MessagesService } from './messages/messages.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     PageNotFoundComponent,
     LoginComponent,
     UserProfileComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     FlexLayoutModule,
   ],
-  providers: [],
+  providers: [MessagesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
