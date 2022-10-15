@@ -1,4 +1,5 @@
-<div fxLayoutAlign="center start">
+<div fxLayoutAlign="start center" fxLayout="column">
+  <div class="mat-display-2 margin-top">New released books</div>
   <ng-container *ngIf="books$ | async as books">
     <app-books-card-list [books]="books"> </app-books-card-list>
 
