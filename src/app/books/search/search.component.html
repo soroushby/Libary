@@ -16,7 +16,7 @@
   <div class="error" *ngIf="!searchResult?.length && isSearchedEver">
     <h4>Unable to find books</h4>
   </div>
-
+  <div class="mat-display-2" *ngIf="searchResult?.length">Results:</div>
   <table
     mat-table
     mat-sort
@@ -48,18 +48,7 @@
         <span><img class="book-avatar" [src]="book.image" /></span>
       </td>
     </ng-container>
-
-    <ng-container matColumnDef="link">
-      <th mat-header-cell *matHeaderCellDef>Details</th>
-      <td mat-cell *matCellDef="let book">
-        <a
-          [routerLink]="[books / book.isbn13]"
-          routerLinkActive="router-link-active"
-        >
-          <mat-icon>arrow_circle_right</mat-icon>
-        </a>
-      </td>
-    </ng-container>
+    >
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

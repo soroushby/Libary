@@ -46,7 +46,7 @@ import { MessagesService } from './messages/messages.service';
     MaterialModule,
     FlexLayoutModule,
   ],
-  providers: [MessagesService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,5 +1,39 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" #sidenav>Sidenav content</mat-sidenav>
+  <mat-sidenav mode="side" #sidenav>
+    <mat-nav-list fxLayout="column" fxLayoutGap="1rem">
+      <a
+        mat-list-item
+        routerLinkActive="router-link-active"
+        fxLayoutAlign="center"
+      >
+        <app-login fxFlex></app-login>
+      </a>
+      <a
+        mat-list-item
+        [routerLink]="['/books']"
+        routerLinkActive="router-link-active"
+        fxLayoutAlign="center"
+      >
+        Books list
+      </a>
+      <a
+        mat-list-item
+        [routerLink]="['/books/search']"
+        routerLinkActive="router-link-active"
+        fxLayoutAlign="center"
+      >
+        Search
+      </a>
+      <a
+        mat-list-item
+        [routerLink]="['/contactus']"
+        routerLinkActive="router-link-active"
+        fxLayoutAlign="center"
+      >
+        Contact us
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="toolbar" fxLayoutGap="5rem" fxLayoutAlign=" center">
       <button

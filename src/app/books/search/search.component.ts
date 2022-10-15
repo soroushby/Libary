@@ -9,7 +9,7 @@ import { BookUnDetailed } from '../interfaces/book-undetailed.model';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  displayedColumns: string[] = ['title', 'price', 'view', 'link'];
+  displayedColumns: string[] = ['title', 'price', 'view'];
   books: any;
   searchResult = [];
   isSearchedEver: boolean | undefined;

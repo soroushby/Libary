@@ -1,7 +1,9 @@
 .container{
   height: 100vh;
 width: 100vw;
-
+background-image: url('../../assets/contactus.png');
+background-size: cover;
+background-repeat: no-repeat;
 
 }
 
@@ -12,7 +14,7 @@ width: 100vw;
 .card{
 
   width: 650px;
-  background-color: rgb(252, 252, 252);
+  background-color: rgba(236, 236, 236, 0.945);
 }
 .form{
 
