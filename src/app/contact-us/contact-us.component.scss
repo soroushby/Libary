@@ -13,14 +13,16 @@ background-repeat: no-repeat;
 
 .card{
 
-  width: 650px;
+min-width:40rem;
   background-color: rgba(236, 236, 236, 0.945);
 }
 .form{
 
-  width: 600px;
+
 }
 
-.submit-button{
+.fxClass-lt-md{
+
+  min-width:30rem;
 
 }

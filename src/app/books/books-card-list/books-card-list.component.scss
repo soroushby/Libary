@@ -10,10 +10,14 @@
 table {
 
   margin-bottom: 1rem;
-  width:600px;
+  min-width:40rem;
 
 }
 
+.fxClass-lt-md{
+  min-width:30rem;
+
+}
 // .example-header-image {
 
 //   background-size: cover;

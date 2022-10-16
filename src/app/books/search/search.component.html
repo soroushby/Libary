@@ -18,7 +18,9 @@
   </div>
   <div class="mat-display-2" *ngIf="searchResult?.length">Results:</div>
   <table
+    ngClass.lt-sm="fxClass-lt-md"
     mat-table
+    fxFlex
     mat-sort
     [dataSource]="searchResult"
     *ngIf="searchResult?.length"

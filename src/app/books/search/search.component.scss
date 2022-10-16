@@ -1,6 +1,6 @@
 table {
 
-  width:600px;
+min-width: 35rem;
 background-color: rgba(255, 255, 255, 0.938);
   margin-bottom: 2rem;
 
@@ -19,3 +19,11 @@ background-color: rgba(255, 255, 255, 0.938);
   .margin-top{
     margin-top: 2rem;
   }
+.container{
+  min-width: 100vw;
+}
+
+.fxClass-lt-md{
+  min-width:28rem;
+
+}
