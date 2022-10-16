@@ -9,6 +9,7 @@
         <app-login fxFlex></app-login>
       </a>
       <a
+        [routerLinkActiveOptions]="{ exact: true }"
         mat-list-item
         [routerLink]="['/books']"
         routerLinkActive="router-link-active"
@@ -17,6 +18,7 @@
         Books list
       </a>
       <a
+        [routerLinkActiveOptions]="{ exact: true }"
         mat-list-item
         [routerLink]="['/books/search']"
         routerLinkActive="router-link-active"
@@ -47,6 +49,7 @@
       </button>
 
       <button
+        [routerLinkActiveOptions]="{ exact: true }"
         fxHide.lt-md
         fxLayoutAlign="center center"
         mat-icon-button

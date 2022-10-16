@@ -35,7 +35,7 @@ export class BooksService {
         return response['books'];
       }),
       catchError((err) => {
-        const message = 'Could not load courses';
+        const message = 'Could not load Books';
         this.messages.showErrors(message);
         console.log(message, err);
         return throwError(() => err);
