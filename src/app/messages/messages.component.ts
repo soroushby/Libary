@@ -14,7 +14,7 @@ import { MessagesService } from './messages.service';
         color: #a94442;
         background-color: #f2dede;
         border: 1px solid #ebccd1;
-        padding: 20px;
+        padding: 2rem;
         font-family: Roboto;
         position: relative;
       }
